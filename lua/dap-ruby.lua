@@ -166,6 +166,21 @@ local function setup_ruby_configuration(dap)
 			localfs = true,
 			waiting = 1000,
 		},
+				{
+			type = "ruby",
+			name = "run dev test",
+			bundle = "false",
+			request = "attach",
+			command = "dev",
+			script = "test ${file}",
+			port = 38698,
+			server = "127.0.0.1",
+			options = {
+				source_filetype = "ruby",
+			},
+			localfs = true,
+			waiting = 1000,
+		},
 		{
 			type = "ruby",
 			name = "run rspec current_file",
